@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git submodule update --init --recursive
+
 if ! [ -f lapack.tgz ]; then
   curl -L https://github.com/Reference-LAPACK/lapack/archive/v3.9.0.tar.gz -o lapack.tgz
 fi

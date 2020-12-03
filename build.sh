@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ./get_sources.sh
+./build_openblas.sh
 
 yes | cp -rf make.inc lapack
 
@@ -14,12 +15,12 @@ if [ $? != 0 ]; then
 fi
 
 cd lapack
-make lib
+#make lib
 
 mkdir -p ../build
 yes | cp -rf *.a ../build
 yes | cp -rf ../lapack.framework ../build
-xcrun -sdk iphoneos clang -arch arm64 ../build/*.a -all_load -shared -F../build -framework ios_flang_runtime -framework Accelerate -o ../build/lapack.framework/lapack
+xcrun -sdk iphoneos clang -arch arm64 ../build/*.a -all_load -shared -F../build -framework ios_flang_runtime -framework openblas "-Wl,-install_name,@rpath/lapack.framework/lapack" -o ../build/lapack.framework/lapack
 yes | cp -rf ../fortran-ios/share/ios_flang_runtime.framework ../build/
 
 docker stop flang

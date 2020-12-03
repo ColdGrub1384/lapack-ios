@@ -8,8 +8,10 @@ if ! [ -f fortran-ios.zip ]; then
   curl -L https://github.com/ColdGrub1384/fortran-ios/releases/download/v1.0/fortran-ios-macos-x86_64.zip -o fortran-ios.zip
 fi
 
+rm -rf lapack
+rm -rf fortran-ios
 tar xzf lapack.tgz
 unzip fortran-ios.zip
+rm -rf __MACOSX
 
-rm -rf lapack
 mv lapack-3.9.0 lapack

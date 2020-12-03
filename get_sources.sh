@@ -9,7 +9,7 @@ if ! [ -f fortran-ios.zip ]; then
 fi
 
 tar xzf lapack.tgz
-#unzip fortran-ios.zip
+unzip fortran-ios.zip
 
 rm -rf lapack
 mv lapack-3.9.0 lapack

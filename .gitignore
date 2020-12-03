@@ -1,0 +1,6 @@
+*.tgz
+*.zip
+lapack/*
+fortran-ios/*
+build/*
+.DS_Store

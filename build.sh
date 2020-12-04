@@ -15,7 +15,7 @@ if [ $? != 0 ]; then
 fi
 
 cd lapack
-#make lib
+make lib
 
 mkdir -p ../build
 yes | cp -rf *.a ../build

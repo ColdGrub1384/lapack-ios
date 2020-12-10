@@ -7,4 +7,4 @@ Docker is required to build the project.
 
 Note: While building, the Fortran compiler will throw this error: `error: Invalid record`. But it builds successfully anyway.
 
-[Download the pre-built binaries](https://github.com/ColdGrub1384/lapack-ios/releases/download/v1.2/lapack-ios.zip)
+[Download the pre-built binaries](https://github.com/ColdGrub1384/lapack-ios/releases/download/v1.3/lapack-ios.zip)

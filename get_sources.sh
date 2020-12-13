@@ -7,7 +7,7 @@ if ! [ -f lapack.tgz ]; then
 fi
 
 if ! [ -f fortran-ios.zip ]; then
-  curl -L https://github.com/ColdGrub1384/fortran-ios/releases/download/v1.1/fortran-ios-macos-x86_64.zip -o fortran-ios.zip
+  curl -L https://github.com/ColdGrub1384/fortran-ios/releases/download/v2.0/fortran-ios-macos-x86_64.zip -o fortran-ios.zip
 fi
 
 if ! [ -d lapack ] && ! [ -d fortran-ios ]; then
